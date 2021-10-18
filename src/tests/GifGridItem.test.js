@@ -1,6 +1,6 @@
 import React from 'react'
 import {shallow} from 'enzyme'
-import {GifGridItem} from '../../Componentes/GifGridItem';
+import {GifGridItem} from '../Componentes/GifGridItem';
 import testUtils from 'react-dom/test-utils';
 
 

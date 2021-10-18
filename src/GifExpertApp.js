@@ -2,10 +2,10 @@ import React, { useState } from 'react'
 import { AddCategory } from './Componentes/AddCategory';
 import { GifGrid } from './Componentes/GifGrid';
 
-export const GifExpertApp = () => {
+export const GifExpertApp = ({defaultCategorias=[]}) => {
 
 //------Defino mi estado------------
-    const [categorias, setCategorias] = useState(['One Punch']); 
+    const [categorias, setCategorias] = useState(defaultCategorias); 
 //-----------------------------------------------
 
 

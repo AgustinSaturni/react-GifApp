@@ -2,9 +2,8 @@ import React,{useState} from 'react'
 import PropTypes from 'prop-types';
 
 
-
 export const AddCategory = ({setCategorias}) => { //recibo funcion que mandé
-    const [valorInicial, setState] = useState('Ingresar valor'); //defino el estado del componente
+    const [valorInicial, setState] = useState(''); //defino el estado del componente
 
     const handleChange = (event)=>{      //Este me actualiza mi estado con cada char que escribo en el box.
 
@@ -18,13 +17,12 @@ export const AddCategory = ({setCategorias}) => { //recibo funcion que mandé
             setCategorias(categorias => [valorInicial,...categorias]);
             setState('');
         }
-        
-
+      
     }
-
 
     return (            //este onSubmit actua cuando aprieto enter.
         <form onSubmit={handleSubmit}> 
+            <p>{valorInicial}</p>
             <input type="text" value={valorInicial} onChange={handleChange} />
         </form>
     )
